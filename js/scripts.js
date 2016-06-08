@@ -8,10 +8,10 @@ var pigLatin = function(inputWord) {
     if (vowels.includes(inputArray[i])) {break;}
     else {spliceIndex++}
   }
-  debugger;
   //find if first letter of the inputted word is in the array called vowels
   if (vowels.includes(inputArray[0])) {
     inputArray.push("ay");
+    var outputArray = inputArray.slice();
   }
   else {
     var firstLetter = inputArray.slice(0,spliceIndex);
