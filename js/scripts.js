@@ -2,12 +2,8 @@
 var pigLatin = function(inputWord) {
   //change input string to lower case
   var inputWord = inputWord.toLowerCase();
-  //set array of vowels to compare string to
-  var vowels = ["a","e","i","o","u"];
   //turn input string into array
   var inputArray = inputWord.split("");
-  //check array for spaces
-  var badInputs = [" ", "0", "1", "2", "3", ]
   //initialize variable to tell .slice and .splice where to cut
   var spliceIndex = 0
   //set spliceIndex based on how many consonants are at beginning of word
@@ -16,15 +12,12 @@ var pigLatin = function(inputWord) {
     else {spliceIndex++}
   }
   //Find if the input is a single word with no spaces or special characters
-  if (/[" "]/.test(inputArray)) {
+  if (/[(1-9) | (" ")]/.test(inputArray)) {
     alert("Please enter a single word with no spaces");
-  }
-  else if (/[1-9]/.test(inputArray)) {
-    alert("Please don't enter any numbers!");
   }
   else {
     //find if first letter of the inputted word is in the array called vowels
-    if (vowels.includes(inputArray[0])) {
+    if (/[aeiou]/.test(inputArray[0])) {
       inputArray.push("ay");
       var outputArray = inputArray.slice();
     }
