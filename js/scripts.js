@@ -2,18 +2,25 @@
 var pigLatin = function(inputWord) {
   var inputWord = inputWord.toLowerCase();
   var vowels = ["a","e","i","o","u"];
-  debugger;
   var inputArray = inputWord.split("");
+  var spliceIndex = 0
+  for (var i = 0; i < inputArray.length; i++) {
+    if (vowels.includes(inputArray[i])) {break;}
+    else {spliceIndex++}
+  }
+  debugger;
   //find if first letter of the inputted word is in the array called vowels
   if (vowels.includes(inputArray[0])) {
     inputArray.push("ay");
   }
   else {
-    var firstLetter = inputArray[0];
-    inputArray.splice(0,1);
-    inputArray.push(firstLetter, "ay");
+    var firstLetter = inputArray.slice(0,spliceIndex);
+    firstLetter.push("ay");
+    inputArray.splice(0,spliceIndex);
+    var outputArray = inputArray.concat(firstLetter);
+
   }
-  return inputArray.join('');
+  return outputArray.join('');
 };
 
 // user interface logic
