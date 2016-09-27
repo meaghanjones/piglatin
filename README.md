@@ -51,7 +51,7 @@ For strings longer than a word, the program should return false
 
 ## Known Bugs
 
-No known bugs
+At the moment the app has the logic but does not show the translated words. 
 
 ## Support and contact details
 
