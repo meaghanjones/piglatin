@@ -43,3 +43,30 @@ For numbers, the program should return false.
 For strings longer than a word, the program should return false
 * Input example: "hello my name is"
 * Output example: Please enter a word <br>
+
+## Setup/Installation Requirements
+
+* [Click here to translate a phrase to piglatin!](https://rawgit.com/meaghanjones/piglatin/master/index.html)
+
+
+## Known Bugs
+
+No known bugs
+
+## Support and contact details
+
+If you have any issues, questions, or suggestions for improvements please send an email to meaghan.m.jones@gmail.com
+
+## Technologies Used
+
+* html
+* css
+* JavaScript
+* JQuery
+
+### License
+
+*This website is licensed under an open source license*
+
+Copyright (c) 2016 **Meaghan and Caleb**
+
